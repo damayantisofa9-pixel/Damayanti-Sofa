@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAMAYANTI SOFA - Jasa Service & Custom Sofa Terbaik Jabodetabek</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#16a34a',
+                            600: '#15803d',
+                            700: '#166534',
+                            800: '#14532d',
+                            900: '#064e3b',
+                            dark: '#0b1320',
+                            gold: '#d4af37',
+                            goldlight: '#f3e5ab'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Pulse Animation for WhatsApp FAB */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        .wa-pulse {
+            animation: pulse-ring 2s infinite;
+        }
+        .glass-nav {
+            background: rgba(11, 19, 32, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brand-900 text-brand-goldlight text-xs sm:text-sm py-2 px-4 text-center font-medium flex justify-center items-center gap-2 border-b border-brand-800">
+        <span class="inline-flex items-center justify-center bg-brand-gold text-brand-dark text-xs px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Promo Khusus</span>
+        <span>✨ <b>FREE Survey & Antar-Jemput</b> Jabodetabek & Cikarang!</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-gold to-yellow-200 flex items-center justify-center text-brand-dark font-extrabold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid font-bold fa-couch text-brand-dark"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-black text-white tracking-wider block leading-none">DAMAYANTI</span>
+                        <span class="text-xs text-brand-gold font-semibold tracking-widest uppercase">Sofa & Upholstery</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                    <a href="#keunggulan" class="hover:text-brand-gold transition-colors">Keunggulan</a>
+                    <a href="#layanan" class="hover:text-brand-gold transition-colors">Layanan</a>
+                    <a href="#katalog" class="hover:text-brand-gold transition-colors">Katalog Model</a>
+                    <a href="#cara-kerja" class="hover:text-brand-gold transition-colors">Cara Order</a>
+                    <a href="#testimoni" class="hover:text-brand-gold transition-colors">Testimoni</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="https://instagram.com/service_sofa_bekasii" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-pink-400 text-xl transition-colors p-2" title="Follow Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/6285559332194?text=Halo%20Damayanti%20Sofa,%20saya%20ingin%20konsultasi%20service%2Fcustom%20sofa" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-lg shadow-emerald-900/30 hover:shadow-emerald-900/50 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Hubungi Kami</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none p-2" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Modal -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 border-b border-gray-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#keunggulan" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Keunggulan</a>
+            <a href="#layanan" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Layanan</a>
+            <a href="#katalog" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Katalog Model</a>
+            <a href="#cara-kerja" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Cara Order</a>
+            <a href="#testimoni" class="mobile-link block text-gray-200 hover:text-brand-gold font-medium py-2">Testimoni</a>
+            <div class="pt-2 flex flex-col gap-3">
+                <a href="https://wa.me/6285559332194?text=Halo%20Damayanti%20Sofa,%20saya%20ingin%20konsultasi%20service%2Fcustom%20sofa" target="_blank" class="w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Chat WhatsApp (0855-5933-2194)
+                </a>
+                <a href="https://instagram.com/service_sofa_bekasii" target="_blank" class="w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-instagram text-lg"></i> @service_sofa_bekasii
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-brand-dark text-white pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+        <!-- Decorative Background Effect -->
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brand-900/80 border border-brand-gold/40 text-brand-goldlight px-4 py-2 rounded-full text-xs sm:text-sm font-medium shadow-inner">
+                        <i class="fa-solid fa-star text-brand-gold"></i>
+                        <span>Spesialis Reparasi & Pembuatan Sofa Custom</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Kembalikan Kemewahan Sofa Anda Seperti <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-yellow-200 to-brand-gold">Baru Kembali</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        <b>DAMAYANTI SOFA</b> melayani perbaikan ganti kain/kulit, tambah busa, perbaikan rangka, hingga pembuatan sofa baru custom dengan kualitas presisi & bergaransi.
+                    </p>
+
+                    <!-- Key highlights badges -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 text-xs sm:text-sm font-semibold">
+                        <span class="bg-gray-800/80 border border-gray-700 text-green-400 px-3.5 py-2 rounded-lg flex items-center gap-2">
+                            <i class="fa-solid fa-truck-fast"></i> FREE Antar-Jemput
+                        </span>
+                        <span class="bg-gray-800/80 border border-gray-700 text-yellow-400 px-3.5 py-2 rounded-lg flex items-center gap-2">
+                            <i class="fa-solid fa-clipboard-check"></i> FREE Survey Lokasi
+                        </span>
+                        <span class="bg-gray-800/80 border border-gray-700 text-emerald-400 px-3.5 py-2 rounded-lg flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved"></i> Hasil Bergaransi
+                        </span>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/6285559332194?text=Halo%20Damayanan%20Sofa,%20saya%20ingin%20tanya%20estimasi%20biaya%20service%2Fcustom%20sofa" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-green-900/40 hover:scale-[1.02] transition-all">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Konsultasi Gratis Via WA</span>
+                        </a>
+                        <a href="#katalog" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white font-semibold text-base px-6 py-4 rounded-xl transition-all">
+                            <span>Lihat Katalog Sofa</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- Location Tag -->
+                    <p class="text-xs text-gray-400 pt-2 flex items-center justify-center lg:justify-start gap-2">
+                        <i class="fa-solid fa-location-dot text-red-400"></i> Area Layanan: Jakarta, Bogor, Depok, Tangerang, Bekasi, Cikarang & Sekitarnya.
+                    </p>
+                </div>
+
+                <!-- Hero Image Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-gold to-emerald-500 rounded-3xl blur opacity-30"></div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700/50 bg-gray-900">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Damayanti Sofa Luxury Interior" class="w-full h-80 sm:h-96 object-cover transform hover:scale-105 transition duration-700">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6">
+                                <span class="bg-brand-gold text-brand-dark text-xs font-bold px-2.5 py-1 rounded">Hasil Pengerjaan Premium</span>
+                                <h3 class="text-white font-bold text-lg mt-2">Ganti Kain & Restorasi Busa Total</h3>
+                                <p class="text-xs text-gray-300">Pilihan puluhan katalog kain/kulit sintetis & MBtech original.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION WHY CHOOSE US -->
+    <section id="keunggulan" class="py-16 sm:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-600 tracking-widest uppercase mb-2">Mengapa Memilih Kami?</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-gray-900">Solusi Terbaik Untuk Kenyamanan Ruangan Anda</p>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">FREE Survey & Antar-Jemput</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Tim kami siap datang langsung ke lokasi Anda untuk cek kondisi sofa serta melakukan antar-jemput tanpa biaya tambahan.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-swatchbook"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Bahan Lengkap & Berkualitas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Ratusan pilihan katalog kain (Kain Suede, Velvet, Canvas, Chenille) & Kulit Sintetis (MBTech, Microfiber, Genuine Leather).</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Tukang Berpengalaman</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Dikerjakan oleh teknisi ahli spesialis sofa puluhan tahun. Jahitan rapi, presisi, padat, dan tahan lama.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Harga Transparan & Bersahabat</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Estimasi biaya fleksibel yang disesuaikan dengan model sofa, ukuran, serta bahan yang dipilih tanpa biaya tersembunyi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN SERVICES SECTION -->
+    <section id="layanan" class="py-16 sm:py-24 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-gold tracking-widest uppercase mb-2">Layanan Utama Kami</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold">Dua Solusi Utama Untuk Sofa Anda</p>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Service Card 1 -->
+                <div class="bg-slate-800 rounded-3xl p-8 sm:p-10 border border-slate-700 shadow-2xl flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-bl-full pointer-events-none"></div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-emerald-900/60 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full mb-6 border border-emerald-700">
+                            <i class="fa-solid fa-wrench"></i> Reparasi & Perbaikan
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Service Sofa & Upholstery</h3>
+                        <p class="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed">
+                            Mengubah sofa lama Anda yang kusam, kempes, atau rusak menjadi tampak baru kembali dengan pengerjaan mendetail.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-400"></i> Ganti Kain / Ganti Kulit Sintetis & Asli</li>
+                            <li class="flex items-center gap-3"><li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-400"></i> Tambah / Ganti Busa High Density (Busa Yellow/Super)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-400"></i> Perbaikan Rangka Patah & Ganti Per / Webbing Rubber</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-400"></i> Modifikasi Bentuk & Desain Sofa Lama</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285559332194?text=Halo%20Damayanti%20Sofa,%20saya%20mau%20tanya%20service%20sofa" target="_blank" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-6 rounded-xl transition-all">
+                        <span>Pesan Jasa Service Sofa</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-slate-800 rounded-3xl p-8 sm:p-10 border border-slate-700 shadow-2xl flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-bl-full pointer-events-none"></div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-amber-900/60 text-amber-400 text-xs font-bold px-3 py-1 rounded-full mb-6 border border-amber-700">
+                            <i class="fa-solid fa-couch"></i> Custom Manufacture
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Custom Bikin Sofa Baru</h3>
+                        <p class="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed">
+                            Buat sofa impian yang pas persis dengan ukuran ruangan, gaya interior rumah, cafe, kantor, maupun hotel Anda.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400"></i> Bebas Tentukan Ukuran (Custom Dimensions)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400"></i> Bebas Pilih Warna, Tekstur & Jenis Bahan</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400"></i> Bebas Pilih Tingkat Keempukan Busa</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400"></i> Bisa Buat Sesuai Foto / Desain Interior Anda</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285559332194?text=Halo%20Damayanti%20Sofa,%20saya%20mau%20custom%20bikin%20sofa%20baru" target="_blank" class="inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-bold py-3.5 px-6 rounded-xl transition-all">
+                        <span>Custom Sofa Sekarang</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY & MODELS SECTION -->
+    <section id="katalog" class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-xs font-bold text-brand-600 tracking-widest uppercase mb-2">Model Kursi & Sofa</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-gray-900">Melayani Semua Jenis & Model Sofa</p>
+                <p class="text-gray-600 mt-3 text-sm sm:text-base">Apapun model sofa Anda, tim pakar kami berpengalaman mengerjakannya dengan hasil maksimal.</p>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Sofa Models Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Model 1: Sofa Recliner -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" alt="Sofa Recliner" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Spesialis Recliner</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Sofa Recliner</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Service mekanisme recliner, ganti kulit sintetis/kain, dan penguatan busa sandaran agar tetap nyaman saat bersantai.</p>
+                        </div>
+                        <a href="https://wa.me/6285559332194?text=Halo,%20saya%20ingin%20service/custom%20Sofa%20Recliner" target="_blank" class="text-brand-600 hover:text-brand-800 text-sm font-bold inline-flex items-center gap-2">
+                            Konsultasi Model Ini <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Model 2: Sofa Minimalis -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80" alt="Sofa Minimalis" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Populer</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Sofa Minimalis Modern</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Sofa L-Shape, 2-seater, 3-seater gaya scandinavian atau modern minimalis untuk ruang tamu kekinian.</p>
+                        </div>
+                        <a href="https://wa.me/6285559332194?text=Halo,%20saya%20ingin%20service/custom%20Sofa%20Minimalis" target="_blank" class="text-brand-600 hover:text-brand-800 text-sm font-bold inline-flex items-center gap-2">
+                            Konsultasi Model Ini <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Model 3: Sofa Chesterfield -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?auto=format&fit=crop&w=600&q=80" alt="Sofa Chesterfield" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Klasik Mewah</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Sofa Chesterfield</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Restorasi kancing tufting rumit khas Chesterfield dengan bahan kulit premium & pengerjaan detail tinggi.</p>
+                        </div>
+                        <a href="https://wa.me/6285559332194?text=Halo,%20saya%20ingin%20service/custom%20Sofa%20Chesterfield" target="_blank" class="text-brand-600 hover:text-brand-800 text-sm font-bold inline-flex items-center gap-2">
+                            Konsultasi Model Ini <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Model 4: Kursi Ukir -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580481072645-022f9a6d8310?auto=format&fit=crop&w=600&q=80" alt="Kursi Ukir Jepara" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Kayu & Ukiran</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Kursi Ukir / Klasik</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Ganti dudukan & sandaran busa kursi ukir jati, pelitur ulang kayu, serta pemasangan per tebal.</p>
+                        </div>
+                        <a href="https://wa.me/6285559332194?text=Halo,%20saya%20ingin%20service/custom%20Kursi%20Ukir" target="_blank" class="text-brand-600 hover:text-brand-800 text-sm font-bold inline-flex items-center gap-2">
+                            Konsultasi Model Ini <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Model 5: Sofa Cafe & Resto -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Sofa Cafe & Resto" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Project Commercial</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Sofa Cafe & Restaurant</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Pembuatan booth sofa cafe, kursi resto beruntet, bahan oscar anti air & mudah dibersihkan.</p>
+                        </div>
+                        <a href="https://wa.me/6285559332194?text=Halo,%20saya%20ingin%20service/custom%20Sofa%20Cafe%20Resto" target="_blank" class="text-brand-600 hover:text-brand-800 text-sm font-bold inline-flex items-center gap-2">
+                            Konsultasi Model Ini <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Model 6: Kursi Kantor & Makan -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Kursi Kantor & Dining Chair" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute top-4 right-4 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm">Kantor & Rumah</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Kursi Kantor & Kursi Makan</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Service hidrolik, ganti kain netting/oscar kursi direksi, serta reparasi set kursi makan keluarga.</p>
+                        </div>
+                        <a href="https://wa.me/6285559332194?text=Halo,%20saya%20ingin%20service/custom%20Kursi%20Kantor%20Makan" target="_blank" class="text-brand-600 hover:text-brand-800 text-sm font-bold inline-flex items-center gap-2">
+                            Konsultasi Model Ini <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Price Note Banner -->
+            <div class="mt-12 bg-gradient-to-r from-brand-900 to-slate-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl border border-brand-800">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-2xl flex-shrink-0">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-brand-goldlight">Informasi Estimasi Harga</h4>
+                        <p class="text-sm text-gray-300">"Harga bersifat fleksibel & bersahabat, disesuaikan dengan model sofa, tingkat kerusakan, serta jenis bahan pilihan Anda."</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/6285559332194?text=Halo%20Damayanti%20Sofa,%20saya%20mau%20minta%20estimasi%20harga" target="_blank" class="flex-shrink-0 bg-brand-gold hover:bg-yellow-400 text-brand-dark font-bold px-6 py-3 rounded-xl transition-all shadow-md text-sm whitespace-nowrap">
+                    Dapatkan Estimasi Biaya <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CARA PEMESANAN / WORKFLOW -->
+    <section id="cara-kerja" class="py-16 sm:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-600 tracking-widest uppercase mb-2">Alur Kerja Praktis</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-gray-900">5 Langkah Mudah Memperbaiki Sofa</p>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6 text-center">
+                
+                <!-- Step 1 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center relative">
+                    <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-extrabold flex items-center justify-center text-lg mb-4 shadow-md">1</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Hubungi Kami</h3>
+                    <p class="text-xs text-gray-600">Kirimkan foto sofa Anda melalui WhatsApp untuk konsultasi awal.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center relative">
+                    <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-extrabold flex items-center justify-center text-lg mb-4 shadow-md">2</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Survey Gratis</h3>
+                    <p class="text-xs text-gray-600">Tim kami datang membawa sample kain/kulit untuk ukur presisi di lokasi.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center relative">
+                    <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-extrabold flex items-center justify-center text-lg mb-4 shadow-md">3</div>
+                    <h3 class="font-bold text-gray-900 mb-2">PILIH BAHAN</h3>
+                    <p class="text-xs text-gray-600">Pilih tekstur, warna, dan jenis busa sesuai dengan budget Anda.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center relative">
+                    <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-extrabold flex items-center justify-center text-lg mb-4 shadow-md">4</div>
+                    <h3 class="font-bold text-gray-900 mb-2">PENGERJAAN</h3>
+                    <p class="text-xs text-gray-600">Sofa dijemput dan dikerjakan secara teliti oleh tukang profesional.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center relative">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold text-brand-dark font-extrabold flex items-center justify-center text-lg mb-4 shadow-md">5</div>
+                    <h3 class="font-bold text-gray-900 mb-2">PENGANTARAN</h3>
+                    <p class="text-xs text-gray-600">Sofa selesai diantar kembali ke rumah Anda dengan tampilan baru!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimoni" class="py-16 sm:py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-gold tracking-widest uppercase mb-2">Kata Pelanggan</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold">Ulasan Kepuasan Pelanggan Kami</p>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testi 1 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
+                            "Sofa Chesterfield kesayangan saya kainnya sempat robek dan busanya kempes. Setelah ditangani tim Damayanti Sofa, hasilnya luar biasa rapi! Serasa beli sofa baru seharga puluhan juta."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-slate-700 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold text-brand-dark font-bold flex items-center justify-center">
+                            BH
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Bpk. Hendra</h4>
+                            <p class="text-xs text-gray-400"><i class="fa-solid fa-location-dot text-emerald-400"></i> Summarecon Bekasi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 2 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
+                            "Pesan custom sofa minimalis L-shape untuk apartemen. Ukuran pas banget sesuai ruangan, bahan kain velvet-nya halus dan busanya empuk padat. Recommended seller!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-slate-700 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center">
+                            IA
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Ibu Anita</h4>
+                            <p class="text-xs text-gray-400"><i class="fa-solid fa-location-dot text-emerald-400"></i> Jakarta Selatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testi 3 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
+                            "Prosesnya gak pakai ribet. Tinggal chat WA, timnya langsung datang ke rumah bawa contoh kain. Bebas biaya antar jemput lagi. Sukses terus Damayanti Sofa!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-slate-700 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 text-white font-bold flex items-center justify-center">
+                            RD
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Dr. Rudy</h4>
+                            <p class="text-xs text-gray-400"><i class="fa-solid fa-location-dot text-emerald-400"></i> Cibubur, Depok</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CTA SECTION -->
+    <section class="bg-brand-900 text-white py-16 border-t border-brand-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-4xl font-extrabold mb-4">Siap Memperbaiki Sofa Kesayangan Anda?</h2>
+            <p class="text-brand-goldlight max-w-xl mx-auto text-sm sm:text-base mb-8">Konsultasikan kebutuhan sofa Anda secara gratis sekarang juga. Tim kami siap merespons dengan cepat.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://wa.me/6285559332194?text=Halo%20Damayanti%20Sofa,%20saya%20ingin%20konsultasi%20service%2Fcustom%20sofa" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Hubungi WhatsApp 0855-5933-2194
+                </a>
+                <a href="https://instagram.com/service_sofa_bekasii" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl">
+                    <i class="fa-brands fa-instagram text-2xl"></i> @service_sofa_bekasii
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-gray-400 pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-gold text-brand-dark flex items-center justify-center font-bold text-xl">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-wider">DAMAYANTI SOFA</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Penyedia jasa perbaikan sofa (upholstery) & pembuatan sofa custom berkualitas tinggi di area Jabodetabek & Cikarang.
+                    </p>
+                </div>
+
+                <!-- Col 2: Jangkauan Pelayanan -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-gray-800 pb-2">Jangkauan Layanan</h4>
+                    <ul class="text-xs space-y-2 text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold text-xs"></i> Jakarta (Selatan, Timur, Barat, Utara, Pusat)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold text-xs"></i> Bogor & Sekitarnya</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold text-xs"></i> Depok & Margonda</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold text-xs"></i> Tangerang & Tangerang Selatan</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold text-xs"></i> Bekasi (Kota & Kabupaten)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold text-xs"></i> Cikarang & Jababeka</li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Layanan Kami -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-gray-800 pb-2">Layanan Kami</h4>
+                    <ul class="text-xs space-y-2 text-gray-300">
+                        <li>• Service & Ganti Kain/Kulit Sofa</li>
+                        <li>• Tambah & Ganti Busa Super</li>
+                        <li>• Custom Sofa Baru Bebas Desain</li>
+                        <li>• Perbaikan Sofa Recliner & Chesterfield</li>
+                        <li>• Service Kursi Kantor & Kursi Makan</li>
+                        <li>• Pembuatan Booth Sofa Cafe & Resto</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Kontak Sosial -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-gray-800 pb-2">Kontak Resmi</h4>
+                    <div class="space-y-3 text-xs">
+                        <a href="https://wa.me/6285559332194" target="_blank" class="flex items-center gap-3 text-gray-300 hover:text-green-400">
+                            <i class="fa-brands fa-whatsapp text-lg text-green-500"></i>
+                            <span>0855-5933-2194</span>
+                        </a>
+                        <a href="https://instagram.com/service_sofa_bekasii" target="_blank" class="flex items-center gap-3 text-gray-300 hover:text-pink-400">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>@service_sofa_bekasii</span>
+                        </a>
+                        <div class="flex items-start gap-3 text-gray-400">
+                            <i class="fa-solid fa-clock text-amber-500 mt-0.5"></i>
+                            <span>Senin - Minggu (08.00 - 20.00 WIB)<br>Siap Respon WA Fast Response</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2026 DAMAYANTI SOFA. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP ACTION BUTTON -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/6285559332194?text=Halo%20Damayanti%20Sofa,%20saya%20ingin%20bertanya%20mengenai%20layanan%20service%20atau%20custom%20sofa" target="_blank" rel="noopener noreferrer" class="wa-pulse flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <span class="hidden sm:inline text-sm font-semibold tracking-wide">Konsultasi Gratis</span>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT FOR MOBILE MENU TOGGLE -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
